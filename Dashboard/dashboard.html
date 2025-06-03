@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="dashboard.css">
+        <script src="https://jsdeliver.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!--sidebar-->
+            <aside class="sidebar">
+                <div class="logo">Dashboard</div>
+                <nav class="menu">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i>Users</a></li>
+                        <li><a href="#"><i class="fas fa-chart-bar"></i>Analytics</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!--main content-->
+            <main class="main-content">
+                <!--Header-->
+                <header class="header">
+                    <h1>Welcome back, Admin</h1>
+                    <div class="search-box">
+                        <input type="text" placeholder="search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div> 
+                </header>
+                <!--cards-->
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Total Users</h3>
+                        <p class="count">2,543</p>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card">
+                        <h3>Revenue</h3>
+                        <p class="count">$45230</p>
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="card">
+                        <h3>Products</h3>
+                        <p class="count">1,234</p>
+                        <i class="fas fa-box"></i>
+                    </div>
+                </div>
+                <!--charts-->
+                <div class="charts">
+                    <div class="chart-container">
+                        <canvas id="linechart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="barchart"></canvas>
+                    </div>
+                </div>
+
+                <!--Recent-orders Table-->
+                <div class="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Product</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-body">
+                            <!--javascript to populate this-->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+
+        <script src="dashboard.js"></script>
+        <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    </body>
+</html>
